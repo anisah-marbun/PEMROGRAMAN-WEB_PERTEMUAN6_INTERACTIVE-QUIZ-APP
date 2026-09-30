@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <h1>🧠 Interactive Quiz</h1>
+
+        <div id="progress">Soal 1/5</div>
+        <div id="timer">Waktu: 30 detik</div>
+
+        <div class="quiz-content">
+            <div id="question"></div>
+
+            <div id="options" class="options-grid"></div>
+
+            <button id="nextBtn" class="hidden">
+                Next ➡️
+            </button>
+
+        </div>
+
+        <div id="result" class="hidden">
+
+            <h2>Hasil Quiz</h2>
+            <p>
+                skor:
+                <span id="score"></span>
+            </p>
+
+            <p>
+                High Score:
+                <span id="highScore"></span>
+            </p>
+
+            <button id="restartBtn">
+                🔄Ulangi
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
