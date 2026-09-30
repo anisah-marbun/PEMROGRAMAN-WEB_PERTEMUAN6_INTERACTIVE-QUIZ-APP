@@ -89,7 +89,7 @@ function startTimer() {
     timer = setInterval(function() {
         timeLeft--;
 
-        timerEl.textContent = `Waktu : $ {timeLeft} detik`;
+        timerEl.textContent = `Waktu : ${timeLeft} detik`;
 
         if (timeLeft <= 0) {
             clearInterval(timer);
@@ -142,8 +142,8 @@ optionsEl.addEventListener("click",function(e){
     });
 
     nextBtn.classList.remove("hidden");
-
-    startTimer()
+ startTimer()
+    
 });
 
 nextBtn.addEventListener("click", function(){
@@ -154,6 +154,7 @@ nextBtn.addEventListener("click", function(){
     } else {
         document.querySelector(".quiz-content").classList.add("hidden");
         resultEl.classList.remove("hidden");
+        clearInterval(timer);
 
         scoreEl.textContent = score;
         const savedHighScore = Number(localStorage.getItem("quizHighScore")) || 0;
