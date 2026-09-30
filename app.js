@@ -89,7 +89,7 @@ function startTimer() {
     timer = setInterval(function() {
         timeLeft--;
 
-        timerEl.textContent = `Waktu : ${timeLeft} detik`;
+        timerEl.textContent = `Waktu: ${timeLeft} detik`;
 
         if (timeLeft <= 0) {
             clearInterval(timer);
@@ -118,7 +118,7 @@ function renderQuestion() {
     });
 
     nextBtn.classList.add("hidden");
-
+ startTimer();
 }
 
 optionsEl.addEventListener("click",function(e){
@@ -142,7 +142,7 @@ optionsEl.addEventListener("click",function(e){
     });
 
     nextBtn.classList.remove("hidden");
- startTimer()
+ clearInterval(timer);
     
 });
 
